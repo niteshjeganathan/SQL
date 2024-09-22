@@ -129,3 +129,92 @@ RENAME <old table name> TO <new table namme>;
 INSERT INTO <table name> VALUES (val1, val2, .. , '');
 ```
 ### Select 
+1. Simple Select
+```sql
+SELECT * FROM <table name>;
+SELECT <col1>, <col2> FROM <table name>;
+```
+2. Alias Name
+```sql
+SELECT <col1> as c1, <col2> as c2 FROM <table name>;
+```
+3. Distint Clause
+```sql
+SELECT DISTINCT <col1> FROM <table name>;
+```
+4. Where Clause
+```sql
+SELECT <col1>, <col2> FROM <table name> WHERE <conditions>;
+```
+5. Select to create table
+```sql
+CREATE TABLE <table name> AS SELECT <column names> FROM <table name>;
+```
+6. Copy only table definition
+```sql
+CREATE TABLE <table name> AS SELECT <column names> FROM <table name> WHERE 1=2;
+```
+7. Select to Insert
+```sql
+INSERT INTO <table> (SELECT <column names> FROM <table>);
+```
+### Update
+1. Simple Update
+```sql
+UPDATE <table name> SET <col> = <new value>;
+```
+2. Using Where Clause
+```sql
+UPDATE <table name> SET <col> = <new value>, <col2> = <new value> WHERE <conditions>;
+```
+### Delete
+1. Delete all rows
+```sql
+DELETE FROM <table name>;
+```
+2. Where Clause
+```sql
+DELETE FROM <table name> WHERE <conditions>;
+```
+
+## TCL
+### Commit
+```sql
+COMMIT;
+```
+### Save Point
+```sql
+SAVEPOINT <save point>;
+```
+### Rollback
+```sql
+ROLLBACK;
+ROLLBACK <save point>;
+```
+
+## DCL 
+### Grant
+1. Grant all privileges
+```sql
+GRANT ALL ON <object name> TO <username>;
+```
+2. Grant certain privileges
+```sql
+GRANT <privileges> ON <object name> TO <username>;
+```
+3. Grant Execute Privilege
+```sql
+GRANT EXECUTE ON <function name> TO <username>;
+```
+4. Setting Privilege to Role
+```sql
+GRANT <any DML command> TO <role name>;
+GRANT <role name> TO <user name>;
+```
+
+### Revoke
+```sql
+REVOKE <privileges> ON <object name> FROM <username>;
+REVOKE <any DML commmand> ON <table name> FROM <username>;
+```
+
