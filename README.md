@@ -23,5 +23,6 @@
 ### Oracle Data Types
 | Type Name  |  Syntax  | Description | Range | Valid Data
 | :----------|:--------:| :----------:| :---: | :---------: |
+| Character | char() | Fixed Length Character | 1 - 2000 bytes | '12345' |
 
 
