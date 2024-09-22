@@ -39,6 +39,14 @@
 ### Create 
 1. Simple Creation
 ```sql
-CREATE TABLE <table name> ( <column name> <datatype> , <column name> <datatype> );
+CREATE TABLE <table name> ( <column name 1> <datatype> , <column name 2> <datatype> );
+```
+2. With primary key, Without constraint
+```
+CREATE TABLE <table name> ( <column name 1> <datatype> , <column name 2> <datatype> , PRIMARY KEY ( <column name 1> );
+```
+3. With primary key and foreign key constraint
+```
+CREATE TABLE <table name> ( <column name 1> <datatype> , <column name 2> <datatype> , CONSTRAINT <constraint name 1> PRIMARY KEY ( <column name 1> , CONSTRAINT <constraint name 2> FOREIGN KEY ( <column name 2> );
 ```
 
