@@ -1,6 +1,7 @@
 # SQL (Structured Query Language)
 
-## Categories of Commands
+## Introduction
+### Categories of Commands
 * Data Definition Language - (Sets up, changes and removes tables)
   * Create
   * Alter
@@ -18,3 +19,6 @@
   * Commit
   * Rollback
   * Save Point 
+
+### Oracle Data Types
+| Left-Aligned  | Center Aligned  | Right Aligned |
