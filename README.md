@@ -21,6 +21,7 @@
   * Save Point 
 
 ### Oracle Data Types
-| Left-Aligned  | Center Aligned  | Right Aligned |
-| :------------ |:---------------:| -----:|
+| Type Name  |  Syntax  | Description | Range | Valid Data
+| :----------|:--------:| :----------:| :---: | :---------: |
+
 
