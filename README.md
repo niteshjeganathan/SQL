@@ -225,3 +225,97 @@ REVOKE <any DML commmand> ON <table name> FROM <username>;
 | Comparison | =, !=, <, <=, >, >=, between, not between, in, not in, like, not like | 
 | Logical | and, or, not | 
 
+## SQL Functions
+* Single Row Functions
+* Group Functions
+
+### Single Row Functions
+1. Date Functions
+```sql
+add_months(date, no_of_months);
+last_day(date);
+months_between(date1, date2);
+round(date, [formmat]);
+next_day(date, day);
+trunc(date, [format]);
+greatest(date1, date2, ...);
+new_time(date, 'this zone', 'other zone')
+```
+2. Numeric Functions
+```sql
+abs();
+ceil();
+cos();
+cosh();
+exp();
+floor();
+power(m, n);
+mod(m, n);
+round(m, n);
+trunc(m, n);
+sqrt(m);
+```
+3. Character Functions
+```sql
+initcap();
+lower();
+upper();
+ltrim();
+rtrim();
+replace(char, search, replace);
+lpad(char, length, special char);
+rpad(char, length, special char);
+chr(number);
+length(char);
+```
+4. Conversion Functions
+```sql
+to_char(date, format)
+to_date(char, format)
+to_number(char)
+```
+5. Miscellaneous Functions
+```sql
+uid - Integer value of login
+user - Username
+nvl(column, new value) - replace null with value
+vsize(value) - replaces number of bytes in value
+```
+
+### Group Functions
+```sql
+count(*)
+count(col name)
+cound(distinct col name)
+min(col name)
+max(col name)
+avg(col name)
+sum(col name)
+stdev(col name)
+variance(col name)
+```
+
+## Set Operators
+### Union 
+```sql
+<query1> UNION <query1>;
+```
+### Union All
+```sql
+<query1> UNION ALL <query2>;
+```
+### Intersect 
+```sql
+<query1> INTERSECT <query2>;
+```
+### Minus 
+```sql
+<query1> minus <query2>;
+```
+
+## Joins 
+| Type |  Sub Type  |
+| :----------|:--------:|
+| Simple Join | Equi Join = |
+| Self Join | any operators | 
+| Outer Join | Left outer join/Right outer join | 
