@@ -319,3 +319,5 @@ variance(col name)
 | Simple Join | Equi Join = |
 | Self Join | any operators | 
 | Outer Join | Left outer join/Right outer join | 
+
+## Subqueries 
