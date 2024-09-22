@@ -221,6 +221,7 @@ REVOKE <any DML commmand> ON <table name> FROM <username>;
 ## Operations 
 | Type |  Symbol/Keyword  |
 | :----------|:--------:| :----------:| :---: | :---------: |
-| Arithmetic | +, -, *, / 
+| Arithmetic | +, -, *, / |
 | Comparison | =, !=, <, <=, >, >=, between, not between, in, not in, like, not like | 
 | Logical | and, or, not | 
+
