@@ -22,3 +22,5 @@
 
 ### Oracle Data Types
 | Left-Aligned  | Center Aligned  | Right Aligned |
+| :------------ |:---------------:| -----:|
+
