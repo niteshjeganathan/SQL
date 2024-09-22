@@ -74,7 +74,7 @@ CREATE TABLE <table name> (
 ```sql
 CREATE SEQUENCE <sequence name>
 INCREMENT BY <increment value> 
-START WITH <starting value>
+START WITH <starting value>;
 ```
 ```sql
 CREATE SEQUENCE my_sequence
@@ -84,4 +84,48 @@ INCREMENT BY 1;
 INSERT INTO my_table (id, name)
 VALUES (nextval('my_sequence'), 'John Doe');
 ```
+6. Role Creation
+```sql
+CREATE ROLE <role name>;
+```
 
+### Alter 
+1. Add new columns
+```sql
+ALTER TABLE <table name> ADD ( <column name> <datatype> );
+```
+2. Modify datatype or increase/decrease column width
+```sql
+ALTER TABLE <table name> MODIFY ( <column name> <new datatype> );
+```
+3. Delete Columns or delete constraints
+```sql
+ALTER TABLE <table name> DROP COLUMN <columm name>;
+ALTER TABLE <table name> DROP CONSTRAINT <constraint name>;
+```
+Note: Constraints addition and column changing (data type or increasing width) can only be done
+if column values are null. 
+
+### Truncate
+1. Remove the rows, not the defintion
+```sql
+TRUNCATE TABLE <table name>;
+```
+
+### Drop 
+1. Remove rows and the definition
+```sql
+DROP TABLE <table name>;
+```
+
+### Rename
+```sql
+RENAME <old table name> TO <new table namme>;
+```
+
+## DML 
+### Insert
+```sql
+INSERT INTO <table name> VALUES (val1, val2, .. , '');
+```
+### Select 
