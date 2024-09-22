@@ -39,14 +39,49 @@
 ### Create 
 1. Simple Creation
 ```sql
-CREATE TABLE <table name> ( <column name 1> <datatype> , <column name 2> <datatype> );
+CREATE TABLE <table name> (
+    <column name 1> <datatype> ,
+    <column name 2> <datatype>
+);
 ```
 2. With primary key, Without constraint
-```
-CREATE TABLE <table name> ( <column name 1> <datatype> , <column name 2> <datatype> , PRIMARY KEY ( <column name 1> );
+```sql
+CREATE TABLE <table name> (
+    <column name 1> <datatype> ,
+    <column name 2> <datatype> ,
+    PRIMARY KEY ( <column name 1>)
+);
 ```
 3. With primary key and foreign key constraint
+```sql
+CREATE TABLE <table name> (
+    <column name 1> <datatype> ,
+    <column name 2> <datatype> ,
+    CONSTRAINT <constraint name 1> PRIMARY KEY ( <column name 1> ),
+    CONSTRAINT <constraint name 2> FOREIGN KEY ( <column name 2> )
+);
 ```
-CREATE TABLE <table name> ( <column name 1> <datatype> , <column name 2> <datatype> , CONSTRAINT <constraint name 1> PRIMARY KEY ( <column name 1> , CONSTRAINT <constraint name 2> FOREIGN KEY ( <column name 2> );
+4. Check Constraints
+```sql
+CREATE TABLE <table name> (
+    <column name 1> <datatype> ,
+    <column name 2> <datatype> ,
+    CHECK ( <column name 1> in (values)),
+    CHECK ( <column name 2> between <val1> and <val2> )
+);
+```
+5. Sequence Creation
+```sql
+CREATE SEQUENCE <sequence name>
+INCREMENT BY <increment value> 
+START WITH <starting value>
+```
+```sql
+CREATE SEQUENCE my_sequence
+START WITH 1
+INCREMENT BY 1;
+
+INSERT INTO my_table (id, name)
+VALUES (nextval('my_sequence'), 'John Doe');
 ```
 
