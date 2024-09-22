@@ -23,6 +23,9 @@
 ### Oracle Data Types
 | Type Name  |  Syntax  | Description | Range | Valid Data
 | :----------|:--------:| :----------:| :---: | :---------: |
-| Character | char() | Fixed Length Character | 1 - 2000 bytes | '12345' |
-
+| Character | char(length) | Fixed Length Character | 1 - 2000 bytes | '12345' |
+| Character | varchar2(length) | Variable Length Character | 1 - 4000 bytes | '12345' | 
+| Number | number | any Integer | Integer range | 123.43 | 
+| Date | date | Fixed Date Length | Date range |  '03-jan-2021' |
+| Long | Long | Variable Length character (Only once in table) | Max 2GB | 'ggfgg...' |
 
