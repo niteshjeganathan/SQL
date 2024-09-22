@@ -35,3 +35,10 @@
 | Large Object | BFILE | File pointers | Max 4GB | - |
 | Time | Timestamp | Date with time | - | '24-sep-75:12:12'|
 
+## DDL 
+### Create 
+1. Simple Creation
+```sql
+CREATE TABLE <table name> ( <column name> <datatype> , <column name> <datatype> );
+```
+
