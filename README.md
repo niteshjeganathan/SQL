@@ -321,3 +321,68 @@ variance(col name)
 | Outer Join | Left outer join/Right outer join | 
 
 ## Subqueries 
+### Returning only one value
+```sql
+SELECT * FROM <table name> WHERE <column name> <relational oper> <subquery>;
+```
+
+### Returning more than one value
+1. ANY
+```sql
+SELECT * FROM <table name> WHERE <column name> <relational oper> ANY <subquery>;
+```
+2. ALL
+```sql
+SELECT * FROM <table name> WHERE <column name> <relational oper> ALL <subquery>;
+```
+3. IN
+```sql
+SELECT * FROM <table name> WHERE <column name> IN <subquery>;
+```
+4. NOT IN
+```sql
+SELECT * FROM <table name> WHERE <column name> NOT IN <subquery>;
+```
+5. EXISTS
+```sql
+SELECT * FROM <table name> EXISTS <subquery>;
+
+SELECT customer_id, customer_name
+FROM customers c
+WHERE EXISTS (SELECT 1 
+              FROM orders o
+              WHERE o.customer_id = c.customer_id);
+```
+6. NOT EXISTS
+```sql
+SELECT * FROM <table name> EXISTS <subquery>;
+```
+7. CONTAINS
+```sql
+<query> CONTAINS <query>;
+```
+8. EXCEPT
+```sql
+<query> EXCEPT <query>;
+```
+9. GROUP BY
+```sql
+SELECT <column 1>, <column 2> FROM <table name>
+    WHERE <condition>
+    GROUP BY <column 2>, <column 1>;
+```
+10. HAVING
+```sql
+SELECT <column 1>, <column 2> FROM <table name>
+    WHERE <condition>
+    GROUP BY <column 2>, <column 1>
+    HAVING <conditions>;
+```
+11. ORDER BY
+```sql
+SELECT <column 1>, <column 2> FROM <table name>
+    WHERE <condition>
+    GROUP BY <column 2>, <column 1>
+    HAVING <conditions>
+    ORDER BY <columns> DESC/ASC;
+```
