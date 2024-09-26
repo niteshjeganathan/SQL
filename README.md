@@ -386,3 +386,76 @@ SELECT <column 1>, <column 2> FROM <table name>
     HAVING <conditions>
     ORDER BY <columns> DESC/ASC;
 ```
+## Views
+* Virtual Table
+* Restricts database access and allows data dependence
+* View from single table updatable if from single table and contains primary key
+* Not updatable if from many tables or contains any group by, aggregate functions, ...
+* 
+
+```sql
+CREATE OR REPLACE VIEW <view name> AS <query>;
+CREATE OR REPLACE VIEW <view name> AS <query> WITH READ ONLY;
+```
+
+## Procedural Language SQL, PL/SQL
+### PL/SQL Block
+```sql
+DECLARE
+<declarations>
+BEGIN
+<executable statements>
+EXCEPTION
+<exception handlers>
+END;
+```
+
+### Data Types
+* Boolean
+* Integer
+* Real
+* Character - varchar2(), char()
+* Rowid
+* Raw
+* LOB
+
+### Attributes
+* %type - database column
+* %rowtype - one row in table
+
+```sql
+<variable name> <table_name.column name>%ROWTYPE;
+<variable name> <table_name>%ROWTYPE;
+```
+
+### Control Structures
+1. Conditional Control
+```sql
+IF <condition> THEN
+<statements>;
+END IF;
+```
+
+2. Simple Loop
+```sql
+LOOP
+<statements>
+EXIT WHEN <condition>
+END LOOP;
+```
+
+3. While Loop
+```sql
+WHILE <condition>
+LOOP
+<statements>
+END LOOP;
+```
+
+4. For Loop
+```sql
+FOR <variable> IN [REVERSE] <initial value> .. <final value>
+LOOP
+<statements>
+END LOOP;
+```
